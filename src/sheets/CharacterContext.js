@@ -1,8 +1,14 @@
 import React, { createContext, useState } from 'react';
 
 const defaultCharacterData = {
-	"Inspiration": {
-		"Inspiration": ""
+	"Always Visible": {
+		"Level": "",		
+		"Character Name": "",
+		"Race": "",		
+		"HP (TEMP HP) / MAX HP": "",
+		"Inspiration": "",
+		"Status": "",
+		"Vision": ""
 	},
 	"Ability Scores": {
 		"Strength (Mod) [Save]": "",
@@ -45,14 +51,13 @@ const defaultCharacterData = {
 	"Combat": {
 		"Hit Dice": "",
 		"Initiative": "",
-		"Movement Speed": "",
-		"HP (TEMP HP) / MAX HP": "",
 		"AC": "",
 		"Defenses": "",
 		"Actions": "",
 		"Bonus Actions": "",
 		"Reactions": "",
-		"Status Condition": ""
+		"Status Condition": "",
+		"Speed": ""
 	},
 	
 	"Items": {
@@ -80,11 +85,7 @@ const defaultCharacterData = {
 		"Level 9 Spells": ""
 	},		
 	"Biography": {
-		"Character Name": "",
 		"Background": "",
-		"Race": "",
-		"Total Level": "",
-		"Class(es)": "",
 		"Personality": "",
 		"Gender": "",
 		"Allies": "",
@@ -93,7 +94,8 @@ const defaultCharacterData = {
 		"Ideal": "",
 		"Bond": "",
 		"Flaw": "",
-		"Age": ""
+		"Age": "",
+		"Class": ""
 	},	
 	"Appearance": {
 		"Height": "",
@@ -103,6 +105,7 @@ const defaultCharacterData = {
 		"Eyes": ""
 	}
 }
+
 
 const CharacterContext = createContext();
 
