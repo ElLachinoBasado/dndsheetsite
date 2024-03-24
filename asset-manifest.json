@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/dndsheetsite/static/css/main.8fe2fa50.css",
+    "main.js": "/dndsheetsite/static/js/main.89e980b2.js",
+    "static/js/453.6633359b.chunk.js": "/dndsheetsite/static/js/453.6633359b.chunk.js",
+    "static/media/glyphicons-halflings-regular.svg": "/dndsheetsite/static/media/glyphicons-halflings-regular.060b2710bdbbe3dfe48b.svg",
+    "static/media/glyphicons-halflings-regular.ttf": "/dndsheetsite/static/media/glyphicons-halflings-regular.4692b9ec53fd5972caa2.ttf",
+    "static/media/glyphicons-halflings-regular.woff": "/dndsheetsite/static/media/glyphicons-halflings-regular.82b1212e45a2bc35dd73.woff",
+    "static/media/glyphicons-halflings-regular.eot": "/dndsheetsite/static/media/glyphicons-halflings-regular.5be1347c682810f199c7.eot",
+    "static/media/glyphicons-halflings-regular.woff2": "/dndsheetsite/static/media/glyphicons-halflings-regular.be810be3a3e14c682a25.woff2",
+    "index.html": "/dndsheetsite/index.html",
+    "main.8fe2fa50.css.map": "/dndsheetsite/static/css/main.8fe2fa50.css.map",
+    "main.89e980b2.js.map": "/dndsheetsite/static/js/main.89e980b2.js.map",
+    "453.6633359b.chunk.js.map": "/dndsheetsite/static/js/453.6633359b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8fe2fa50.css",
+    "static/js/main.89e980b2.js"
+  ]
+}
