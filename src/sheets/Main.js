@@ -43,8 +43,9 @@ const Main = () => {
                 <title>Main Sheet</title>
             </Helmet>
             <Form onSubmit={handleSubmit}>                
-                <Accordion>
-                    {Object.entries(formData).map(([group, data], index) => (
+            <Accordion>
+                {Object.entries(formData).map(([group, data], index) => (
+                    group !== "Always Visible" ? (
                         <Accordion.Item eventKey={index} key={group}>
                             <Accordion.Header>{group}</Accordion.Header>
                             <Accordion.Body>
@@ -59,8 +60,22 @@ const Main = () => {
                                 ))}
                             </Accordion.Body>
                         </Accordion.Item>
-                    ))}
-                </Accordion>
+                    ) : (
+                        <div key={group}>
+                            {Object.entries(data).map(([field, fieldValue]) => (
+                                <Form.Group className="mb-3" controlId={`field-${field}`} key={field}>
+                                    <Form.Label>{field}</Form.Label>
+                                    <Form.Control 
+                                        defaultValue={fieldValue} 
+                                        onChange={(event) => handleInputChange(event, group, field)}
+                                    />
+                                </Form.Group>
+                            ))}
+                        </div>
+                    )
+                ))}
+            </Accordion>
+
 
                 <br/>
 
