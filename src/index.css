@@ -6,7 +6,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.u_container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px; /* Gap between columns */
+}
 
+.column {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -42,13 +42,35 @@ const Main = () => {
             <Helmet>
                 <title>Main Sheet</title>
             </Helmet>
-            <Form onSubmit={handleSubmit}>                
-            <Accordion>
-                {Object.entries(formData).map(([group, data], index) => (
-                    group !== "Always Visible" ? (
-                        <Accordion.Item eventKey={index} key={group}>
-                            <Accordion.Header>{group}</Accordion.Header>
-                            <Accordion.Body>
+            <div className="c_container">
+                <div className = "column">
+                    <p>Use the provided accordions to open up your character and edit their game statistics! Once you are done with your session,
+                    feel free to save it to your device so that you can re-upload it later!</p>
+        
+        
+        
+                </div>
+                <div className = "column">
+                <Form onSubmit={handleSubmit}>                
+                <Accordion>
+                    {Object.entries(formData).map(([group, data], index) => (
+                        group !== "Always Visible" ? (
+                            <Accordion.Item eventKey={index} key={group}>
+                                <Accordion.Header>{group}</Accordion.Header>
+                                <Accordion.Body>
+                                    {Object.entries(data).map(([field, fieldValue]) => (
+                                        <Form.Group className="mb-3" controlId={`field-${field}`} key={field}>
+                                            <Form.Label>{field}</Form.Label>
+                                            <Form.Control 
+                                                defaultValue={fieldValue} 
+                                                onChange={(event) => handleInputChange(event, group, field)}
+                                            />
+                                        </Form.Group>
+                                    ))}
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        ) : (
+                            <div key={group}>
                                 {Object.entries(data).map(([field, fieldValue]) => (
                                     <Form.Group className="mb-3" controlId={`field-${field}`} key={field}>
                                         <Form.Label>{field}</Form.Label>
@@ -58,45 +80,34 @@ const Main = () => {
                                         />
                                     </Form.Group>
                                 ))}
-                            </Accordion.Body>
-                        </Accordion.Item>
-                    ) : (
-                        <div key={group}>
-                            {Object.entries(data).map(([field, fieldValue]) => (
-                                <Form.Group className="mb-3" controlId={`field-${field}`} key={field}>
-                                    <Form.Label>{field}</Form.Label>
-                                    <Form.Control 
-                                        defaultValue={fieldValue} 
-                                        onChange={(event) => handleInputChange(event, group, field)}
-                                    />
-                                </Form.Group>
-                            ))}
-                        </div>
-                    )
-                ))}
-            </Accordion>
+                            </div>
+                        )
+                    ))}
+                </Accordion>
 
 
-                <br/>
+                    <br/>
 
-                <Form.Group controlId="fileName">
-                    <Form.Label>File Name</Form.Label>
-                    <Form.Control
-                        type="text"
-                        value={fileName}
-                        onChange={(e) => setFileName(e.target.value)}
-                    />
-                </Form.Group>
-                
-                <br/>
+                    <Form.Group controlId="fileName">
+                        <Form.Label>File Name</Form.Label>
+                        <Form.Control
+                            type="text"
+                            value={fileName}
+                            onChange={(e) => setFileName(e.target.value)}
+                        />
+                    </Form.Group>
+                    
+                    <br/>
 
-                <Button variant="primary" type="submit">
-                    Save
-                </Button>
-                <p className="mt-2 text-muted">Your character data will be saved as a JSON file.</p>
+                    <Button variant="primary" type="submit">
+                        Save
+                    </Button>
+                    <p className="mt-2 text-muted">Your character data will be saved as a JSON file.</p>
 
-                <br/>
-            </Form>
+                    <br/>
+                </Form>
+                </div>
+            </div>
         </>
     );
 };
