@@ -43,6 +43,8 @@ const Main = () => {
                 <title>Main Sheet</title>
             </Helmet>
             <div className="c_container">
+                <div className = "column"></div>
+                <div className = "column">
                 <Form onSubmit={handleSubmit}>                
                 <Accordion>
                     {Object.entries(formData).map(([group, data], index) => (
@@ -98,6 +100,7 @@ const Main = () => {
 
                     <br/>
                 </Form>
+                </div>
             </div>
         </>
     );
