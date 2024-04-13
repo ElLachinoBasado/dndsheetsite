@@ -6,13 +6,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-* {
-  box-sizing: border-box;
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  gap: 20px; /* Gap between columns */
 }
 
-#page-wrap {
-  padding-bottom: 10px;
-  padding-top: 10px;
+.column {
+  background-color: #f0f0f0;
+  padding: 20px;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
