@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.container {
+.u_container {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 10px; /* Gap between columns */
