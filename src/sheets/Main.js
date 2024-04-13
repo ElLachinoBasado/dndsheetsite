@@ -43,7 +43,13 @@ const Main = () => {
                 <title>Main Sheet</title>
             </Helmet>
             <div className="c_container">
-                <div className = "column"></div>
+                <div className = "column">
+                    <p>Use the provided accordions to open up your character and edit their game statistics! Once you are done with your session,
+                    feel free to save it to your device so that you can re-upload it later!</p>
+        
+        
+        
+                </div>
                 <div className = "column">
                 <Form onSubmit={handleSubmit}>                
                 <Accordion>
