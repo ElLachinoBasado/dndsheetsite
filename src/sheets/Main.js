@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import CharacterContext from './CharacterContext';
-import { Accordion, Form, Button, Alert } from 'react-bootstrap';
+import { Accordion, Form, Button, Image } from 'react-bootstrap';
 
 const Main = () => {
     const { characterData, setCharacterData } = useContext(CharacterContext);
@@ -43,10 +43,13 @@ const Main = () => {
                 <title>Main Sheet</title>
             </Helmet>
             <div className="u_container">
-                <div className = "column">
+                <div className = "column" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <p>Use the provided accordions to open up your character and edit their game statistics! Once you are done with your session,
-                    feel free to save it to your device so that you can re-upload it later!</p>
-                    <p>The following categories exist and contain more information for you to include, if you so wish.</p> <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                    feel free to save it to your device so that you can re-upload it later! The following categories exist and contain more information for you to include, if you so wish.</p>
+                    <p></p>     
+                    <br/>                
+                    <Image style={{ width: '80%' }} src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0e55649e-5a4b-4c74-8559-a365100f6ca7/deglug4-beb84ad5-6edb-4e3c-aa65-d8b57013599d.jpg/v1/fill/w_1600,h_825,q_75,strp/dnd_party_battle_scene_by_captdiablo_deglug4-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODI1IiwicGF0aCI6IlwvZlwvMGU1NTY0OWUtNWE0Yi00Yzc0LTg1NTktYTM2NTEwMGY2Y2E3XC9kZWdsdWc0LWJlYjg0YWQ1LTZlZGItNGUzYy1hYTY1LWQ4YjU3MDEzNTk5ZC5qcGciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.AUckdpyJ9LFMQ-_GOENb6_wifUke0Rd6jLdSi3mC0HI" roundedCircle/>                    
+                    <br/>
                     <p><b>Ability Scores:</b> How strong, nimble or charismatic your character is! If things exist that change these values, keep track of them here, along with their scores.</p>
                     <p><b>Capabilities:</b> Your proficiencies with anything that is not a skill will be recorded here. If you use the optional rule for feats, those will also be recorded here.</p>
                     <p><b>Skills:</b> This will record just how proficient you are with the skills that you use. If you use a tiered proficiency system, that is also kept track of here.</p>
@@ -54,12 +57,13 @@ const Main = () => {
                     <p><b>Items:</b> What you can carry, how much you can carry, along with anything you have equipped can go here. Don't lose track of your pack mule, as adventuring can give you many a burden to carry.</p>
                     <p><b>Spellcasting:</b> If you don't use spells, don't worry about this part. Heck, delete it and it's contents from the Json file, if you'd like. But, if you do use spells, having a place to put them all together is incredibly nice. </p>
                     <p><b>Biography:</b> Keep track of all those things that don't affect combat or gameplay directly. Useful for roleplaying and remembering what the heck happened in the last 10 minutes (days).</p>
-                    <p><b>Appearance:</b> Despite everything, it's still you. </p><p>When you are done with a session, press "save" to download a file that can be uploaded to this site to open your character again.</p>
+                    <p><b>Appearance:</b> Despite everything, it's still you. Here you can keep track of details like hair or skin color, height, and weight. Just as important as your biography!</p>
+                    <p>When you are done with a session, press "save" to download a file that can be uploaded to this site to open your character again.</p>
         
                 </div>
                 <div className = "column">
                 <Form onSubmit={handleSubmit}>                
-                <Accordion>
+                <Accordion alwaysOpen>
                     {Object.entries(formData).map(([group, data], index) => (
                         group !== "Always Visible" ? (
                             <Accordion.Item eventKey={index} key={group}>
