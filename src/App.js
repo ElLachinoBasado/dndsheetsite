@@ -14,7 +14,7 @@ function App() {
       <Router>
         <Navbar  bg="dark" data-bs-theme="dark" expand="lg" fixed="top">
           <Container>
-            <Navbar.Brand href="/home">            
+            <Navbar.Brand href="/dndsheetsite">            
               5E Character Sheets
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -29,8 +29,7 @@ function App() {
         <Routes>
           <Route path="/upload" element={<Upload/>}/>
           <Route path="/main" element={<Main/>}/>
-          <Route path="/dndsheetsite" element = {<Home/>}/>
-          <Route path="/home" element = {<Home/>}/>
+          <Route path="/dndsheetsite" element = {<Home/>}/>          
         </Routes>
       </Router>
     </CharacterProvider>
