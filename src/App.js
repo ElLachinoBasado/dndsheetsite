@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { CharacterProvider } from './sheets/CharacterContext';
 import Upload from './sheets/Upload';
 import Main from './sheets/Main';
+import Home from './sheets/Home';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Upload/>}/>
           <Route path="/main" element={<Main/>}/>
+          <Route path="/dndsheetsite" element = {<Home/>}/>
         </Routes>
       </Router>
     </CharacterProvider>
