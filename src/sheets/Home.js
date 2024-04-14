@@ -1,24 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom for navigation
-import { Container, Row, Col, Button } from 'react-bootstrap'; // Assuming you're using Bootstrap for styling
+import { Link } from 'react-router-dom'; 
+import { Container, Row, Col, Button, Image } from 'react-bootstrap'; 
 
 const Home = () => {
     return (
-        <Container>
-            <Row>
-                <Col className="column">
+        <Container fluid>
+            <Row className='justify-content-center'>
+                <Col className="column" lg={2}>
                     <h2>Upload</h2>
                     <p>If you are a returning user, use this to load your character.</p>
-                    <Link to="/"> {/* Use Link component from react-router-dom to navigate to Page 1 */}
+                    <Link to="/"> 
                         <Button variant="primary">Upload Your Character</Button>
                     </Link>
                 </Col>
-                <Col className="column">
+                <Col className="column" lg={4}>
+                    <Image src="https://img.goodfon.com/original/1920x1080/0/70/dragon-warrior-knight-creature-horse-cape-sword-weapon-armor.jpg" thumbnail/>
+                </Col>
+                <Col className="column" lg={2}>
                     <h2>Main</h2>
-                    <p>Otherwise, come here to create a new one, then fill in your little guy's information!</p>
-                    <Link to="/Main"> {/* Use Link component from react-router-dom to navigate to Page 2 */}
+                    <p>Otherwise, come here to create a new one, then fill in your character's information!</p>
+                    <Link to="/Main"> 
                         <Button variant="primary">Create New Character</Button>
-                    </Link>
+                    </Link>                    
                 </Col>
             </Row>
         </Container>

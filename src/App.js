@@ -14,22 +14,23 @@ function App() {
       <Router>
         <Navbar  bg="dark" data-bs-theme="dark" expand="lg" fixed="top">
           <Container>
-            <Navbar.Brand>            
+            <Navbar.Brand href="/home">            
               5E Character Sheets
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link to="/" as={Link}>Upload Character</Nav.Link>
+                <Nav.Link to="/upload" as={Link}>Upload Character</Nav.Link>
                 <Nav.Link to="/main" as={Link}>Main Sheet</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
         <Routes>
-          <Route path="/" element={<Upload/>}/>
+          <Route path="/upload" element={<Upload/>}/>
           <Route path="/main" element={<Main/>}/>
           <Route path="/dndsheetsite" element = {<Home/>}/>
+          <Route path="/home" element = {<Home/>}/>
         </Routes>
       </Router>
     </CharacterProvider>
