@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dndsheetsite/static/css/main.74e084c4.css",
-    "main.js": "/dndsheetsite/static/js/main.6981df07.js",
+    "main.js": "/dndsheetsite/static/js/main.36ff509c.js",
     "static/js/453.6633359b.chunk.js": "/dndsheetsite/static/js/453.6633359b.chunk.js",
     "static/media/glyphicons-halflings-regular.svg": "/dndsheetsite/static/media/glyphicons-halflings-regular.060b2710bdbbe3dfe48b.svg",
     "static/media/glyphicons-halflings-regular.ttf": "/dndsheetsite/static/media/glyphicons-halflings-regular.4692b9ec53fd5972caa2.ttf",
@@ -10,11 +10,11 @@
     "static/media/glyphicons-halflings-regular.woff2": "/dndsheetsite/static/media/glyphicons-halflings-regular.be810be3a3e14c682a25.woff2",
     "index.html": "/dndsheetsite/index.html",
     "main.74e084c4.css.map": "/dndsheetsite/static/css/main.74e084c4.css.map",
-    "main.6981df07.js.map": "/dndsheetsite/static/js/main.6981df07.js.map",
+    "main.36ff509c.js.map": "/dndsheetsite/static/js/main.36ff509c.js.map",
     "453.6633359b.chunk.js.map": "/dndsheetsite/static/js/453.6633359b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74e084c4.css",
-    "static/js/main.6981df07.js"
+    "static/js/main.36ff509c.js"
   ]
 }
