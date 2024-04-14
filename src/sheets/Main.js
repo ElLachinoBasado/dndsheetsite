@@ -42,12 +42,19 @@ const Main = () => {
             <Helmet>
                 <title>Main Sheet</title>
             </Helmet>
-            <div className="c_container">
+            <div className="u_container">
                 <div className = "column">
                     <p>Use the provided accordions to open up your character and edit their game statistics! Once you are done with your session,
                     feel free to save it to your device so that you can re-upload it later!</p>
-        
-        
+                    <p>The following categories exist and contain more information for you to include, if you so wish.</p> <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                    <p>Ability Scores: How strong, nimble or charismatic your character is! If things exist that change these values, keep track of them here, along with their scores.</p>
+                    <p>Capabilities: Your proficiencies with anything that is not a skill will be recorded here. If you use the optional rule for feats, those will also be recorded here.</p>
+                    <p>Skills: This will record just how proficient you are with the skills that you use. If you use a tiered proficiency system, that is also kept track of here.</p>
+                    <p>Combat: Your speed, AC, and initiative bonuses are stored here. Write down any common actions in their respective categories for easy access, and if you become petrified, at least you can have that reminder while combat is still happening.</p>
+                    <p>Items: What you can carry, how much you can carry, along with anything you have equipped can go here. Don't lose track of your pack mule, as adventuring can give you many a burden to carry.</p>
+                    <p>Spellcasting: If you don't use spells, don't worry about this part. Heck, delete it and it's contents from the Json file, if you'd like. But, if you do use spells, having a place to put them all together is incredibly nice. </p>
+                    <p>Biography: Keep track of all those things that don't affect combat or gameplay directly. Useful for roleplaying and remembering what the heck happened in the last 10 minutes (days).</p>
+                    <p>Appearance: Despite everything, it's still you. </p><p>When you are done with a session, press "save" to download a file that can be uploaded to this site to open your character again.</p>
         
                 </div>
                 <div className = "column">
