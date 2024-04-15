@@ -9,7 +9,7 @@ const Home = () => {
                 <Col className="column" lg={2}>
                     <h2>Upload</h2>
                     <p>If you are a returning user, use this to load your character.</p>
-                    <Link to="/"> 
+                    <Link to="/upload"> 
                         <Button variant="primary">Upload Your Character</Button>
                     </Link>
                 </Col>
@@ -19,7 +19,7 @@ const Home = () => {
                 <Col className="column" lg={2}>
                     <h2>Main</h2>
                     <p>Otherwise, come here to create a new one, then fill in your character's information!</p>
-                    <Link to="/Main"> 
+                    <Link to="/main"> 
                         <Button variant="primary">Create New Character</Button>
                     </Link>                    
                 </Col>
